@@ -27,10 +27,16 @@ body {
 .container {
   width: 1200px;
   padding: 0 15px;
-  margin-left: 0 auto;
+  margin: 0 auto;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 /* logo */
 .logo {
+  margin-right: 93px;
   color: var(--accent-color);
   font-family: Raleway, cursive;
   font-weight: 700;
@@ -45,11 +51,26 @@ body {
   padding-bottom: 20px;
 }
 /* Site nav */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
 .site-nav {
-  margin-bottom: 232px;
+  display: flex;
+
   color: var(--title-text-color);
 }
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.container-nav {
+  display: flex;
+}
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -59,8 +80,15 @@ body {
 .current {
   color: var(--accent-color);
 }
+.contact {
+  display: flex;
+  margin-left: auto;
+}
 /* hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
   height: 600px;
   background-color: var(--primery-bg-color);
   text-align: center;
@@ -116,6 +144,13 @@ body {
   background-color: var(--accent-color);
 }
 /* feature */
+.feature-list {
+  display: flex;
+  justify-content: space-between;
+}
+.feature-list .item:not(:last-child) {
+  margin-right: 30px;
+}
 .feature-hidden,
 .portfolio-hidden {
   position: absolute;
@@ -138,11 +173,25 @@ body {
   text-transform: uppercase;
 }
 .feature-text {
+  padding-left: 1px;
   margin-top: 0;
   margin-bottom: 94px;
 }
+/* work */
+.work {
+  text-align: center;
+}
+.list-work {
+  display: flex;
+}
+.list-work .item +.item {
+  margin-left: 30px;
+}
 
 /* team */
+.container-team {
+  text-align: center;
+}
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -195,8 +244,4 @@ address {
   font-size: 16px;
   line-height: 1.88;
 }
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+
