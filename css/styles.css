@@ -11,7 +11,7 @@
   --button-primari-hover: #188ce8;
   --footer-link-contact: rgba(255, 255, 255, 0.6);
   --tiam-bg-color: #f5f4fa;
-  --header-border-color: #ECECEC;
+  --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
 }
 /* body */
@@ -35,14 +35,17 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  border: 1px solid crimson;
 }
 .list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-h1,h2,h3,h4,p {
+h1,
+h2,
+h3,
+h4,
+p {
   padding: 0;
   margin: 0;
 }
@@ -50,7 +53,7 @@ h1,h2,h3,h4,p {
   display: block;
 }
 .header {
-  border: 1px solid var(--header-border-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
 /* logo */
 .main-nav .logo {
@@ -172,12 +175,16 @@ h1,h2,h3,h4,p {
 .footer .logo {
   margin-bottom: 20px;
 }
+
 .feature-list {
   display: flex;
   justify-content: space-between;
 }
-.feature-list .item:not(:last-child) {
-  margin-right: 30px;
+.feature-list .item {
+  width: 270px;
+}
+.feature-list .item:not(:first-child) {
+  margin-left: 30px;
 }
 .feature-hidden,
 .portfolio-hidden {
@@ -293,7 +300,15 @@ h1,h2,h3,h4,p {
   font-style: inherit;
 }
 /* Portfolio */
+.portfolio-link {
+  padding: 0;
+  display: block;
+}
+.filter .item + .item {
+  margin-left: 8px;
+}
 .portfolio-list {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -308,9 +323,6 @@ h1,h2,h3,h4,p {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
-.filter .item + .item {
-  margin-left: 8px;
 }
 .portfolio-title {
   margin-bottom: 4px;
