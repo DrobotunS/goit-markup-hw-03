@@ -55,6 +55,27 @@ p {
 .header {
   border-bottom: 1px solid var(--header-border-color);
 }
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.feature-list .card-item,
+.list-team .card-item {
+  flex-basis: calc(100% / 4 - 30px);
+}
+.list-work .card-item,
+.portfolio-list .card-item {
+  flex-basis: calc(100% / 3 - 30px);
+}
+.card-item {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.feature-list .list-team .card-item {
+  flex-basis: calc(100% / 4 - 30px);
+}
 /* logo */
 .main-nav .logo {
   margin-right: 93px;
@@ -172,20 +193,6 @@ p {
   background-color: var(--accent-color);
 }
 /* feature */
-.footer .logo {
-  margin-bottom: 20px;
-}
-
-.feature-list {
-  display: flex;
-  justify-content: space-between;
-}
-.feature-list .item {
-  width: 270px;
-}
-.feature-list .item:not(:first-child) {
-  margin-left: 30px;
-}
 .feature-hidden,
 .portfolio-hidden {
   position: absolute;
@@ -210,12 +217,6 @@ p {
 .work {
   text-align: center;
 }
-.work .list-work {
-  display: flex;
-}
-.list-work .item + .item {
-  margin-left: 30px;
-}
 .work .section-title {
   margin-bottom: 40px;
 }
@@ -227,14 +228,6 @@ p {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--tiam-bg-color);
-}
-.list-team {
-  display: flex;
-  margin-left: -30px;
-}
-.list-team .item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
 }
 .container-team {
   text-align: center;
@@ -266,8 +259,7 @@ p {
   line-height: 1.19;
 }
 .bloc-team {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
 }
 /* footer */
 .footer {
@@ -276,6 +268,7 @@ p {
 }
 .footer .logo {
   display: block;
+  margin-bottom: 20px;
 }
 .link-address {
   color: var(--accent-button-color);
@@ -300,24 +293,8 @@ p {
   font-style: inherit;
 }
 /* Portfolio */
-.portfolio-link {
-  padding: 0;
-  display: block;
-}
 .filter .item + .item {
   margin-left: 8px;
-}
-.portfolio-list {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
-}
-.portfolio-list .item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
 }
 .filter {
   display: flex;
